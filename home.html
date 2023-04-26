@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -70,8 +69,9 @@
 
         .img__wrap {
             position: relative;
-            height: 257px;
-            width: 257px;
+            height: 500px;
+            width: 500px;
+            margin-inline: 50px;
         }
 
         .img__description {
@@ -93,39 +93,39 @@
             opacity: 1;
         }
 
-      .row {
-        display: flex;
-        flex-direction: row;
-
-        flex-wrap: wrap;
-        justify-content: center; /* center columns horizontally */
-        align-items: center; /* center columns vertically */
-      }
-
-      .column {
-        flex: 25%; /* each column takes up 50% of the row width */
-        padding: 10px;
-        justify-content: center; /* center columns horizontally */
-        align-items: center; /* center columns vertically */
-      }
-        
-       /* Responsive layout - when the screen is more than 600px wide, make the columns take up 50% of the row width */
-      @media screen and (min-width: 600px) {
-        .column {
-          flex: 50%;
+        .row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center; /* center columns horizontally */
+            align-items: center; /* center columns vertically */
         }
-      }
 
-      /* Responsive layout - when the screen is more than 800px wide, make the columns take up 33.33% of the row width */
-      @media screen and (min-width: 800px) {
         .column {
-          flex: calc(100% / 3); /* use calc() function to divide by 3 */
+            flex: 25%; /* each column takes up 50% of the row width */
+            padding: 10px;
+            justify-content: center; /* center columns horizontally */
+            align-items: center; /* center columns vertically */
         }
-      }
-      .center {
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
+
+        /* Responsive layout - when the screen is more than 600px wide, make the columns take up 50% of the row width */
+        @media screen and (min-width: 600px) {
+            .column {
+                flex: 50%;
+            }
+        }
+
+        /* Responsive layout - when the screen is more than 800px wide, make the columns take up 33.33% of the row width */
+        @media screen and (min-width: 800px) {
+            .column {
+                flex: calc(100% / 3); /* use calc() function to divide by 3 */
+            }
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
@@ -148,17 +148,19 @@
         <p>Resize the browser window to see how it works.</p>
     </div>
     <div class="row">
-        <div class="column">
-            <div class="img__wrap" class = "center">
-                <img src="img/title.jpg" alt="Image" class = "center" width=257px>
+        <div class="text-center col-md-6">
+            <h2> Episode 1</h2>
+            <div class="img__wrap" margin="" :auto="">
+                <img src="img/title.jpg" alt="Image" class="mr-2" width="500px">
                 <div class="img__description">
                     <p>Some text over the image</p>
                 </div>
             </div>
         </div>
-        <div class="column" class = "center">
+        <div class="text-center col-md-6">
+            <h2>✨NEWEST✨ Episode</h2>
             <div class="img__wrap">
-                <img src="img/title.jpg" alt="Image" class = "center" width=257px>
+                <img src="img/title.jpg" alt="Image" class="mr-2" width="500px">
                 <div class="img__description">
                     <p>Some text over the image</p>
                 </div>
@@ -167,16 +169,16 @@
     </div>
 
 
-    <script>
-        function myFunction() {
+    <script>function myFunction() {
             var x = document.getElementById("myTopnav");
             if (x.className === "topnav") {
                 x.className += " responsive";
             } else {
                 x.className = "topnav";
             }
-        }
-    </script>
+        }</script>
+
+
 
 </body>
 </html>
