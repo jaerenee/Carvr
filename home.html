@@ -68,6 +68,30 @@
                     text-align: left;
                 }
         }
+        .img__wrap {
+            position: relative;
+            height: 200px;
+            width: 257px;
+        }
+
+        .img__description {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(29, 106, 154, 0.72);
+            color: #fff;
+            visibility: hidden;
+            opacity: 0;
+            /* transition effect. not necessary */
+            transition: opacity .2s, visibility .2s;
+        }
+
+        .img__wrap:hover .img__description {
+            visibility: visible;
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -87,14 +111,21 @@
         <p>Resize the browser window to see how it works.</p>
     </div>
 
+    <div class="img__wrap">
+        <img src="image.jpg" alt="Image">
+        <div class="img__description">
+            <p>Some text over the image</p>
+        </div>
+    </div>
+
     <script>
         function myFunction() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
         }
     </script>
 
