@@ -93,15 +93,33 @@
             opacity: 1;
         }
 
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-        }
+      .row {
+        display: flex;
+        flex-direction: row;
 
+        flex-wrap: wrap;
+        justify-content: center; /* center columns horizontally */
+        align-items: center; /* center columns vertically */
+      }
+
+      .column {
+        flex: 25%; /* each column takes up 50% of the row width */
+        padding: 10px;
+      }
+        
+       /* Responsive layout - when the screen is more than 600px wide, make the columns take up 50% of the row width */
+      @media screen and (min-width: 600px) {
         .column {
-            flex: 50%; /* each column takes up 50% of the row width */
-            padding: 10px;
+          flex: 50%;
         }
+      }
+
+      /* Responsive layout - when the screen is more than 800px wide, make the columns take up 33.33% of the row width */
+      @media screen and (min-width: 800px) {
+        .column {
+          flex: calc(100% / 3); /* use calc() function to divide by 3 */
+        }
+      }
     </style>
 </head>
 <body>
