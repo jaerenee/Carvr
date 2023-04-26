@@ -1,0 +1,176 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Carvr Law</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+            .topnav a {
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+                float: right;
+            }
+
+                .topnav a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+                .topnav a.active {
+                    background-color: #978C6E;
+                    color: white;
+                }
+
+            .topnav .icon {
+                display: none;
+            }
+
+        @media screen and (max-width: 600px) {
+            .topnav a:not(:first-child) {
+                display: none;
+            }
+
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav.responsive {
+                position: relative;
+            }
+
+                .topnav.responsive .icon {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+
+                .topnav.responsive a {
+                    float: none;
+                    display: block;
+                    text-align: left;
+                }
+        }
+
+        .img__wrap {
+            position: relative;
+            height: 400px;
+            width: 400px;
+        }
+
+        .img__description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 65%;
+            background: rgba(151, 140, 110, 0.72);
+            color: #fff;
+            visibility: hidden;
+            opacity: 0;
+            /* transition effect. not necessary */
+            transition: opacity .2s, visibility .2s;
+        }
+
+        .img__wrap:hover .img__description {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center; /* center columns horizontally */
+            align-items: center; /* center columns vertically */
+        }
+
+        .column {
+            flex: 25%; /* each column takes up 50% of the row width */
+            padding: 10px;
+            justify-content: center; /* center columns horizontally */
+            align-items: center; /* center columns vertically */
+        }
+
+        /* Responsive layout - when the screen is more than 600px wide, make the columns take up 50% of the row width */
+        @media screen and (min-width: 600px) {
+            .column {
+                flex: 50%;
+            }
+        }
+
+        /* Responsive layout - when the screen is more than 800px wide, make the columns take up 33.33% of the row width */
+        @media screen and (min-width: 800px) {
+            .column {
+                flex: calc(100% / 3); /* use calc() function to divide by 3 */
+            }
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topnav" id="myTopnav">
+
+        <a href="https://jaerenee.github.io/Carvr/home.html" class="active">Home</a>
+        <a href="https://jaerenee.github.io/Carvr/news.html">News</a>
+        <a href="https://jaerenee.github.io/Carvr/contact.html">Contact</a>
+        <a href="https://jaerenee.github.io/Carvr/about.html">About</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div style="padding-left:16px">
+        <h2>Responsive Topnav Example</h2>
+        <p>Resize the browser window to see how it works.</p>
+    </div>
+  
+  
+<div class="w3-row w3-border">
+  <div class="w3-container w3-half w3-red">
+    <h2>w3-half</h2>  
+    <p>The w3-half class uses 50% of the parent container.</p>
+    <p>On screens smaller than 601 pixels it resizes to 100%.</p>
+  </div>
+  <div class="w3-container w3-half">
+    <h2>w3-half</h2>  
+  </div>
+</div>
+
+
+    <script>function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }</script>
+
+
+
+</body>
+</html>
