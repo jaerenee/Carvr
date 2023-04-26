@@ -67,6 +67,17 @@
                     text-align: left;
                 }
         }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .column {
+        flex: 50%; /* each column takes up 50% of the row width */
+        padding: 10px;
+        background-color: lightblue;
+      }
+
     </style>
 </head>
 <body>
@@ -86,6 +97,11 @@
         <p>Resize the browser window to see how it works.</p>
     </div>
 
+    <div class="row">
+      <div class="column">Column 1</div>
+      <div class="column">Column 2</div>
+    </div>
+    
     <script>
         function myFunction() {
           var x = document.getElementById("myTopnav");
