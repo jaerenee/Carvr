@@ -91,6 +91,17 @@
             visibility: visible;
             opacity: 1;
         }
+        .column {
+          float: left;
+          width: 50.00%;
+          padding: 5px;
+        }
+
+        .row::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
     </style>
 </head>
 <body>
@@ -111,13 +122,25 @@
         <h2>Responsive Topnav Example</h2>
         <p>Resize the browser window to see how it works.</p>
     </div>
-
-    <div class="img__wrap">
-        <img src="img/title.jpg" alt="Image" width = 257px>
-        <div class="img__description">
-            <p>Some text over the image</p>
+    <div class="row">
+        <div class="column">
+            <div class="img__wrap">
+                <img src="img/title.jpg" alt="Image" width = 257px>
+                <div class="img__description">
+                    <p>Some text over the image</p>
+                </div>
+            </div>
+        </div>
+       <div class="column">
+            <div class="img__wrap">
+                <img src="img/title.jpg" alt="Image" width = 257px>
+                <div class="img__description">
+                    <p>Some text over the image</p>
+                </div>
+            </div>
         </div>
     </div>
+    
 
     <script>
         function myFunction() {
