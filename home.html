@@ -67,6 +67,7 @@
                     text-align: left;
                 }
         }
+
         .img__wrap {
             position: relative;
             height: 257px;
@@ -91,10 +92,11 @@
             visibility: visible;
             opacity: 1;
         }
+
         .row {
             display: flex;
             flex-wrap: wrap;
-          }
+        }
 
         .column {
             flex: 50%; /* each column takes up 50% of the row width */
@@ -105,12 +107,12 @@
 <body>
 
     <div class="topnav" id="myTopnav">
-        
+
         <a href="https://jaerenee.github.io/Carvr/home.html" class="active">Home</a>
         <a href="https://jaerenee.github.io/Carvr/news.html">News</a>
         <a href="https://jaerenee.github.io/Carvr/contact.html">Contact</a>
         <a href="https://jaerenee.github.io/Carvr/about.html">About</a>
-         
+
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
@@ -122,19 +124,23 @@
     </div>
     <div class="row">
         <div class="column">
-                <img src="img/title.jpg" alt="Image" width = 257px>
+            <div class="img__wrap">
+                <img src="img/title.jpg" alt="Image" width=257px>
                 <div class="img__description">
                     <p>Some text over the image</p>
                 </div>
+            </div>
         </div>
-       <div class="column">
-                <img src="img/title.jpg" alt="Image" width = 257px>
+        <div class="column">
+            <div class="img__wrap">
+                <img src="img/title.jpg" alt="Image" width=257px>
                 <div class="img__description">
                     <p>Some text over the image</p>
                 </div>
+            </div>
         </div>
     </div>
-    
+
 
     <script>
         function myFunction() {
