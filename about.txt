@@ -1,0 +1,10 @@
+includes
+- responsize nav abr
+- responsive two columns
+- text hover overlay
+- left and right nav bar
+needs
+- fix nav bar to be same
+- add nes.html for nav bar to redirect to
+- change contact.html to home.html and vis versa
+- add things to each page
